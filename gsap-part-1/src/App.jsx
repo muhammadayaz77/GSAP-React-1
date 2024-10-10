@@ -9,7 +9,7 @@ function App() {
     gsap.to(gsapRef.current,{
       x:circle,
       duration : 1.5,
-      
+      delay : 0.5,
     })
 
   },[circle])
