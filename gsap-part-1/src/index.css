@@ -11,8 +11,6 @@ main{
   background-color: #111;
   padding: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 .box{
   width: 300px;
