@@ -1,39 +1,46 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import {useGSAP} from '@gsap/react'
 import gsap from 'gsap'
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
-import Page2 from './Page2'
+
 function App() {
   useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    gsap.from('main .box',{
-      rotate : 1440,
-      duration : 2,
-      
+    gsap.from('.box .a',{
+      y : 30,
+      delay : 0.3,
+      duration : 0.5, 
+    stagger : 0.15,
+    opacity : 0
     })
-    gsap.from('#page2 .box',{
-      scale : '0',
-      duration : 0.5,
-      scrollTrigger : {
-        trigger : '#page2 .box',
-        scroller : 'body',
-        markers : true,
-        start : 'top 60%'
-      }
+    gsap.from('.box .b',{
+      y : 30,
+      delay : 0.3,
+      duration : 0.5, 
+    stagger : -0.15,
+    opacity : 0
     })
   })
   return (
-    <>
-    <main>
-     <div className='box'>
-1
-     </div>
-    </main>
-    <Page2 />
-    <div id="page3">
-      <div className="box">3</div>
+    <div>
+      <main>
+        <div className='box'>
+        <h1>
+          <span className='a'>M</span>
+          <span className='a'>u</span>
+          <span className='a'>h</span>
+          <span className='a'>a</span>
+          <span className='a'>m</span>
+          <span className='a'>m</span>
+          <span className='a'>a</span>
+          <span className='a'>d</span>
+          <span className='b'>A</span>
+          <span className='b'>y</span>
+          <span className='b'>a</span>
+          <span className='b'>z</span>
+          
+          </h1>
+        </div>
+      </main>
     </div>
-    </>
   )
 }
 

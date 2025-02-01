@@ -3,7 +3,7 @@ import React from 'react'
 function Page2() {
   return (
   <div id="page2">
-    <div className="box">2</div>
+    <h1>Experiences</h1>
   </div>
   )
 }
